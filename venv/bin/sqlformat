@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/macbookair/Documents/goat farming/django_goat/venv/bin/python" "$0" "$@"
+'''exec' "/Users/macbookair/Documents/goat farming/myproject/venv/bin/python3.12" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

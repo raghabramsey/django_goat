@@ -1,0 +1,52 @@
+body {
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.card {
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.card-header {
+    background-color: #4CAF50; /* Green header */
+    border-top-left-radius: 10px; /* Rounded corners for header */
+    border-top-right-radius: 10px;
+}
+
+.card-header h3 {
+    margin: 0; /* Remove margin from header */
+}
+
+.btn-primary {
+    background-color: #388E3C; /* Darker green for button */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50; /* Lighter green on hover */
+}
+
+.text-primary {
+    color: #4CAF50; /* Green color for links */
+}
+
+.text-primary:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.form-control {
+    border: 1px solid #388E3C; /* Green border for input fields */
+}
+
+.form-control:focus {
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5); /* Focus shadow */
+    border-color: #4CAF50; /* Green border on focus */
+}
+
+.mt-3 {
+    margin-top: 1rem; /* Consistent spacing */
+}
+
+.btn-block {
+    width: 100%; /* Full width buttons */
+}

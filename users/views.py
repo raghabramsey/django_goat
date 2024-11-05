@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm
 from django.contrib.auth.models import User  
-
 def user_list(request):
     users = User.objects.all()  # Query to fetch all user data
     return render(request, 'users/user_list.html', {'users': users})
