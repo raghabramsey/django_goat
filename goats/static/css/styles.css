@@ -1,0 +1,21 @@
+body {
+    background-color: #e0f7e9;
+    font-family: Arial, sans-serif;
+}
+h2 {
+    color: #2b8a3e;
+}
+form, ul {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button {
+    background-color: #2b8a3e;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}

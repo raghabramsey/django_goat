@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <h2>{{ goat.name }}</h2>
+<p>Tag No: {{ goat.tag_no }}</p>
+<p>Breed: {{ goat.breed }}</p>
+<p>Date of Birth: {{ goat.dob }}</p>
+<p>Gender: {{ goat.gender }}</p>
+<p>Weight: {{ goat.weight }} kg</p>
+<p>Health Status: {{ goat.health_status }}</p>
+<p>Location: {{ goat.location }}</p>
+<p>Status: {{ goat.status }}</p>
+</body>
+</html>
