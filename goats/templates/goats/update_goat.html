@@ -1,0 +1,18 @@
+<!-- goats/templates/goats/update_goat.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Goat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h2>Update Goat Information</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+    <a href="{% url 'goat_list' %}">Back to Goat List</a>
+</body>
+</html>

@@ -18,5 +18,9 @@
 <p>Health Status: {{ goat.health_status }}</p>
 <p>Location: {{ goat.location }}</p>
 <p>Status: {{ goat.status }}</p>
+<a href="{% url 'goat_update' goat.id %}">Edit</a>
+<a href="{% url 'goat_history' goat.id %}">View History</a>
+
+
 </body>
 </html>

@@ -5,17 +5,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>GOAT Management - GOAT List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
 
 </head>
 <body>
-    <h2>Goat List</h2>
-<ul>
-    {% for goat in goats %}
-        <li><a href="{% url 'goat_detail' goat.id %}">{{ goat.name }} ({{ goat.tag_no }})</a></li>
-    {% endfor %}
-</ul>
-<a href="{% url 'register_goat' %}">Register a new Goat</a>
+    <header>
+        <h1>GOAT Management</h1>
+        <p>Your Greatest Of All Time Goats</p>
+    </header>
+
+    <main class="container">
+        <section class="goat-list">
+            {% for goat in goats %}
+            <article class="goat-card" href="{% url 'goat_detail' goat.id %}">
+                <img src="{% static 'image/logo.svg' %}" width="200" height="300" alt="Goat Image">
+
+                
+                <div class="goat-info" href="{% url 'goat_detail' goat.id %}">
+                    <h2 class="goat-name">{{ goat.name }} </h2>
+                    <p class="goat-details">({{ goat.tag_no }})</p>
+                    <p class="goat-details" > weight: {{goat.weight }}</p>
+                    <p class="goat-details">Health Status: {{ goat.health_status }}</p>
+                    <a href="{% url 'goat_history' goat.id %}">View History</a>
+                    <a href="{% url 'goat_update' goat.id %}">Edit</a>
+
+
+                </div>
+   
+                </article>
+                {% endfor %}
+            <!-- Add more goat cards as needed -->
+        </section>
+    </main>
+    <a href="{% url 'register_goat' %}" class="add-goat" aria-label="Add new goat">+</a>
+
+    <!-- <a href="% url 'register_goat' %" class="add-goat" aria-label="Add new goat">+</a> -->
 </body>
 </html>

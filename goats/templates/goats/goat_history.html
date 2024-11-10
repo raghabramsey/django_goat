@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goat History</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h2>Goat History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Update Date</th>
+                <th>Tag Number</th>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>weight</th>
+                <th>health_status</th>
+                <!-- Add other fields as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in history_entries %}
+            <tr>
+                <td>{{ entry.update_date }}</td>
+                <td>{{ entry.tag_no }}</td>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.breed }}</td>
+                <td>{{ entry.weight }}</td>
+                <td>{{ entry.status }}</td>
+                <!-- Add other fields as needed -->
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No history available for this goat.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

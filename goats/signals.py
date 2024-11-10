@@ -18,5 +18,4 @@ def save_goat_history(sender, instance, **kwargs):
             location=current_data.location,
             status=current_data.status,
             update_date=current_data.update_date,
-            deleted_date=current_data.deleted_date,
         )

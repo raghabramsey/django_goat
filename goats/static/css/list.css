@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #4a6741;
+    --secondary-color: #a0c1b9;
+    --accent-color: #f0e4d4;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+.goat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.goat-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease;
+}
+
+.goat-card:hover {
+    transform: translateY(-5px);
+}
+
+.goat-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.goat-info {
+    padding: 15px;
+}
+
+.goat-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.goat-details {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.add-goat {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.add-goat:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .goat-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .goat-card {
+        width: 100%;
+    }
+}
